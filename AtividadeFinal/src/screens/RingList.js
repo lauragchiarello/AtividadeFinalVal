@@ -6,20 +6,20 @@ import {
   FlatList,
   StatusBar
 } from 'react-native';
-import { carsData } from '../data/carsData';
-import CarCard from '../components/CarCard';
+import { ringsData } from '../data/ringsData';
+import RingCard from '../components/RingCard';
 
-const CarList = () => {
+const RingList = () => {
   return (
     <View style={styles.container}>
       <StatusBar barStyle="dark-content" />
-      <Text style={styles.Titulo}>Lista de Carros</Text>
-      <Text style={styles.subTitulo}>{carsData.length} carros encontrados</Text>
+      <Text style={styles.Titulo}>Lista de Acessórios</Text>
+      <Text style={styles.subTitulo}>{ringsData.length} Acessórios encontrados</Text>
       
       <FlatList
-        data={carsData}
+        data={ringsData}
         keyExtractor={(item) => item.id.toString()}
-        renderItem={({ item }) => <CarCard car={item} />}
+        renderItem={({ item }) => <RingCard ring={item} />}
         contentContainerStyle={styles.listContent}
       />
     </View>
@@ -50,4 +50,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default CarList;
+export default RingList;

@@ -16,9 +16,9 @@ const HomeScreen = ({ navigation }) => {
       
       <TouchableOpacity 
         style={styles.button}
-        onPress={() => navigation.navigate('CarList')}
+        onPress={() => navigation.navigate('RingList')}
       >
-        <Text style={styles.buttonText}>Lista de Carros</Text>
+        <Text style={styles.buttonText}>Lista de Acessórios</Text>
       </TouchableOpacity>
     </View>
   );

@@ -1,21 +1,21 @@
 import React from 'react';
 import { View, StyleSheet, Text, Image } from 'react-native';
 
-const CarCard = ({ car }) => {
+const RingCard = ({ ring }) => {
   return (
     <View style={styles.card}>
       <Image 
-        source={{ uri: car.imagem }} 
-        style={styles.carImage}
+        source={{ uri: ring.imagem }} 
+        style={styles.ringImage}
         resizeMode="cover"
       />
       <View style={styles.cardContent}>
-        <Text style={styles.carTitle}>
-          {car.marca} {car.modelo}
+        <Text style={styles.ringTitle}>
+          {ring.marca} {ring.modelo}
         </Text>
-        <View style={styles.carDetails}>
-          <Text style={styles.carDetail}>Ano: {car.ano}</Text>
-          <Text style={styles.carDetail}>Cor: {car.cor}</Text>
+        <View style={styles.ringDetails}>
+          <Text style={styles.ringDetail}>Preço: {ring.preco}</Text>
+          <Text style={styles.ringDetail}>Cor: {ring.cor}</Text>
         </View>
       </View>
     </View>
@@ -38,33 +38,33 @@ const styles = StyleSheet.create({
     elevation: 5,
     overflow: 'hidden',
   },
-  carImage: {
+  ringImage: {
     width: '100%',
     height: 200,
   },
   cardContent: {
     padding: 16,
   },
-  carTitle: {
+  ringTitle: {
     fontSize: 20,
     fontWeight: 'bold',
     color: '#333',
     marginBottom: 8,
   },
-  carDetails: {
+  ringDetails: {
     flexDirection: 'row',
     justifyContent: 'space-between',
     marginBottom: 8,
   },
-  carDetail: {
+  ringDetail: {
     fontSize: 16,
     color: '#666',
   },
-  carId: {
+  ringId: {
     fontSize: 14,
     color: '#999',
     fontStyle: 'italic',
   },
 });
 
-export default CarCard;
+export default RingCard;

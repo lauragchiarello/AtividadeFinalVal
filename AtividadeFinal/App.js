@@ -3,7 +3,7 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 import HomeScreen from './src/screens/HomeScreen';
 import CalcDesconto from './src/screens/CalcDesconto';
-import CarList from './src/screens/CarList';
+import RingList from './src/screens/RingList';
 
 const Stack = createStackNavigator();
 
@@ -23,9 +23,9 @@ export default function App() {
         />
 
         <Stack.Screen 
-          name="CarList" 
-          component={CarList}
-          options={{ title: 'Lista de Carros' }}
+          name="RingList" 
+          component={RingList}
+          options={{ title: 'Lista de Acessórios' }}
         />
       </Stack.Navigator>
     </NavigationContainer>
